@@ -18,7 +18,7 @@ variables:
 
 testrepo:
   stage: infrastructure
-  image: openjdk:8
+  image: openjdk:21
   script: ./gradlew -i --console=plain --no-build-cache :testfixtures-offline-repo:buildOfflineRepositories
   artifacts:
     paths:
@@ -37,7 +37,7 @@ testrepo:
 
 jdk8:
   stage: build
-  image: openjdk:8
+  image: openjdk:21
   script: ./gradlew -i -S --console=plain --no-build-cache assemble codenarcAll license
   artifacts:
     paths:
@@ -52,7 +52,7 @@ jdk8:
 
 jdk11:
   stage: build
-  image: openjdk:11
+  image: openjdk:21
   script: ./gradlew -i -S --console=plain --no-build-cache assemble
   artifacts:
     paths:
@@ -67,7 +67,7 @@ jdk11:
 
 jdk12:
   stage: build
-  image: openjdk:12
+  image: openjdk:21
   script: ./gradlew -i -S --console=plain --no-build-cache assemble
   artifacts:
     paths:
@@ -156,7 +156,7 @@ test:gradle_7.4.2,7.5.1:
 
 htmldocs:
   stage: docs
-  image: openjdk:11
+  image: openjdk:21
   dependencies:
     - testrepo
     - jdk11
