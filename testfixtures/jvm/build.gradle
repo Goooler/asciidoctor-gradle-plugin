@@ -15,7 +15,7 @@ dependencies {
     implementation gradleApi()
     implementation gradleTestKit()
     api "org.ysb33r.gradle:grolifant70:${grolifantVersion}"
-    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.13.2'
     api 'commons-io:commons-io:2.6'
     implementation "org.jsoup:jsoup:$jsoupVersion"
     implementation "cglib:cglib-nodep:$cglibVersion"
