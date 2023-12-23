@@ -24,7 +24,7 @@ plugins {
     id 'net.ossindex.audit' version '0.4.11' apply false
     id 'org.kordamp.jdeps' version '0.4.1' apply false
     id 'fi.linuxbox.download.worker' version '0.4' apply false
-    id 'org.ysb33r.ivypot' version '0.13.3' apply false
+    id 'org.ysb33r.ivypot' version '1.0.0' apply false
     id 'org.ysb33r.os' version '0.10' apply false
     id 'org.ysb33r.cloudci' version '2.7' apply false
     id 'org.ysb33r.cloudci.appveyor.testreporter' version '4.0.0' apply false
