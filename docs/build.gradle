@@ -40,7 +40,7 @@ configurations {
 }
 
 dependencies {
-    asciidocExtensions 'com.bmuschko:asciidoctorj-tabbed-code-extension:0.1'
+    asciidocExtensions 'com.bmuschko:asciidoctorj-tabbed-code-extension:0.3'
 }
 
 task prepareSources( type: Sync) {
