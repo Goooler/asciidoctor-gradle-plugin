@@ -17,6 +17,7 @@
 configurations {
     intTestOfflineRepo.extendsFrom compileOnly
     intTestOfflineRepo2
+    remoteTestImplementationResolvable
 }
 
 dependencies {
@@ -72,8 +73,8 @@ gradleTest {
 // and conditions
 sourceSets {
     remoteTest {
-        compileClasspath = sourceSets.main.output +  configurations.remoteTestCompile
-        runtimeClasspath = output + compileClasspath + configurations.remoteTestRuntime
+        compileClasspath = sourceSets.main.output +  configurations.remoteTestImplementationResolvable
+        runtimeClasspath = output + compileClasspath + configurations.remoteTestImplementationResolvable
     }
 }
 
@@ -83,9 +84,9 @@ generateModuleVersions {
 }
 
 dependencies {
-    remoteTestCompile "org.asciidoctor:asciidoctorj:${compileOnlyAsciidoctorJVersion}"
-    remoteTestCompile project(':testfixtures-jvm')
-    remoteTestRuntime "org.asciidoctor:asciidoctorj-groovy-dsl:${compileOnlyGroovyDslVersion}", {
+    remoteTestImplementationResolvable "org.asciidoctor:asciidoctorj:${compileOnlyAsciidoctorJVersion}"
+    remoteTestImplementationResolvable project(':testfixtures-jvm')
+    remoteTestImplementationResolvable "org.asciidoctor:asciidoctorj-groovy-dsl:${compileOnlyGroovyDslVersion}", {
         exclude module: 'groovy-all'
     }
 }
