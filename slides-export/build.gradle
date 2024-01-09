@@ -13,10 +13,10 @@ configurations {
 }
 
 dependencies {
-    implementation project(':asciidoctor-gradle-base')
-    implementation project(':asciidoctor-gradle-js')
-    additionalPluginClasspath project(':asciidoctor-gradle-jvm-slides')
-    additionalPluginClasspath project(':asciidoctor-gradle-js')
+    implementation projects.asciidoctorGradleBase
+    implementation projects.asciidoctorGradleJs
+    additionalPluginClasspath projects.asciidoctorGradleJvmSlides
+    additionalPluginClasspath projects.asciidoctorGradleJs
 }
 
 intTest {

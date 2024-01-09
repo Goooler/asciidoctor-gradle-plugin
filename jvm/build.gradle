@@ -44,7 +44,7 @@ dependencies {
         exclude module: 'groovy-all'
     }
 
-    api project(':asciidoctor-gradle-base')
+    api projects.asciidoctorGradleBase
     implementation("org.ysb33r.gradle:grolifant-rawhide:${agProject.versionOf('grolifant')}")
     runtimeOnly "org.asciidoctor:asciidoctorj-api:${compileOnlyAsciidoctorJVersion}"
     // These three are used in the compatibility tests for extensions

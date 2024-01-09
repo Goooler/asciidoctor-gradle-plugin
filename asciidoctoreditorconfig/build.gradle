@@ -11,8 +11,8 @@ agProject {
 }
 
 dependencies {
-    implementation project(':asciidoctor-gradle-base')
-    additionalPluginClasspath project(':asciidoctor-gradle-jvm')
+    implementation projects.asciidoctorGradleBase
+    additionalPluginClasspath projects.asciidoctorGradleJvm
 }
 
 

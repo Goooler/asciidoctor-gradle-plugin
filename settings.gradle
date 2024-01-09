@@ -50,3 +50,5 @@ include 'asciidoctoreditorconfig'
     include it
     project(":${it}").name = "asciidoctor-gradle-jvm-${it}"
 }
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
