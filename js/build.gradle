@@ -57,7 +57,7 @@ ext {
 }
 
 dependencies {
-    api project(':asciidoctor-gradle-base')
+    api projects.asciidoctorGradleBase
     api "org.ysb33r.gradle:nodejs-gradle-plugin:${nodejsGradleVersion}"
 
     // defaultNodeJsVersion is set in buildSrc

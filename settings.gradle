@@ -10,10 +10,13 @@ plugins {
     id "com.gradle.enterprise" version "3.16.1"
 }
 
+def isCI = providers.gradleProperty('CI').isPresent()
+
 gradleEnterprise {
     buildScan {
         termsOfServiceUrl = 'https://gradle.com/terms-of-service'
         termsOfServiceAgree = 'yes'
+        publishAlwaysIf(isCI)
     }
 }
 
@@ -47,3 +50,5 @@ include 'asciidoctoreditorconfig'
     include it
     project(":${it}").name = "asciidoctor-gradle-jvm-${it}"
 }
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

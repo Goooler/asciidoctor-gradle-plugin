@@ -4,13 +4,13 @@ generateModuleVersions {
 }
 
 dependencies {
-    implementation project(':asciidoctor-gradle-base')
-    implementation project(':asciidoctor-gradle-jvm-gems')
+    implementation projects.asciidoctorGradleBase
+    implementation projects.asciidoctorGradleJvmGems
     implementation "com.github.jruby-gradle:jruby-gradle-core-plugin:${jrubyGradleVersion}"
 }
 
 intTest {
-    enabled = !gradle.startParameter.isOffline()
+    required = !gradle.startParameter.isOffline()
     systemProperties TEST_PROJECTS_DIR: file('src/intTest/projects')
 }
 

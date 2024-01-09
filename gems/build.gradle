@@ -10,7 +10,7 @@ agProject {
 
 dependencies {
     implementation "org.ysb33r.gradle.jruby:jrubygradle-resolver:${pluginJrubySimpleVersion}"
-    api project(':asciidoctor-gradle-jvm')
+    api projects.asciidoctorGradleJvm
 }
 
 tasks.named('test', Test) {
