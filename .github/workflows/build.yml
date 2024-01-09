@@ -23,9 +23,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        # use a short path to avoid exceeding the path limit on Windows... sigh
-        with:
-          path: 'w'
       - uses: actions/setup-java@v4
         with:
           java-version: 11
