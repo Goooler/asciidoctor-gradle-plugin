@@ -42,15 +42,15 @@ codenarc {
 tasks.withType(CodeNarc) { codenarcSourceSetTask ->
     def reportName = (codenarcSourceSetTask.name - 'codenarc').uncapitalize()
     def ideReport = reports.add(org.gradle.api.reporting.internal.TaskGeneratedSingleFileReport, 'ide', reports.task)
-    ideReport.enabled = true
+    ideReport.required = true
     ideReport.destination = file( "${project.codenarc.reportsDir}/${reportName}.ide.txt")
 }
 
 pluginManager.withPlugin('jacoco') {
     jacocoTestReport {
         reports {
-            xml.enabled = true // coveralls plugin depends on xml format report
-            html.enabled = true
+            xml.required = true // coveralls plugin depends on xml format report
+            html.required = true
         }
         mustRunAfter test
     }

@@ -10,7 +10,7 @@ dependencies {
 }
 
 intTest {
-    enabled = !gradle.startParameter.isOffline()
+    required = !gradle.startParameter.isOffline()
     systemProperties TEST_PROJECTS_DIR: file('src/intTest/projects')
 }
 
