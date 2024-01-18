@@ -28,7 +28,7 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
       - name: Cache offline repository
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: testfixtures/offline-repo/build/repo
           key: ${{ runner.os }}-offline-repo-${{ hashFiles('module-versions.properties') }}
@@ -63,7 +63,7 @@ jobs:
       with:
         gradle-home-cache-cleanup: true
     - name: Cache offline repository
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: testfixtures/offline-repo/build/repo
         key: ${{ runner.os }}-offline-repo-${{ hashFiles('module-versions.properties') }}
