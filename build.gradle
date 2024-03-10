@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'net.nemerosa.versioning' version '2.15.1' apply false
+    id 'net.nemerosa.versioning' version '3.1.0' apply false
     id 'com.github.ben-manes.versions' version '0.51.0' apply false
     id 'com.github.hierynomus.license' version '0.16.1' apply false
     id 'com.github.kt3k.coveralls' version '2.12.2' apply false
